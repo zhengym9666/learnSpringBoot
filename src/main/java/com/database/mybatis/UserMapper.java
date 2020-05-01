@@ -1,12 +1,13 @@
 package com.database.mybatis;
 
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
 //mapper要在启动类中被扫描到才能使用
-//@Repository
+@Mapper
 public interface UserMapper{
 
     @Select("SELECT * FROM user_table WHERE username = #{username}")
